@@ -9,6 +9,7 @@ def weather_checker(city):
     if location:
         weather = get_weather_open_meteo(location["lat"], location["lon"])
         print(f"Current Temperature: {weather['current']['temperature_2m']}°C")
+        print(f"Current Humidity: {weather['current']['relative_humidity_2m']}")
 
 
 def get_weather_open_meteo(latitude, longitude):
